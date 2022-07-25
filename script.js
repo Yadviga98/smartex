@@ -1,8 +1,5 @@
-// import Headroom from "headroom.js";
-
-// var myElement = document.querySelector("header");
-// var headroom = new Headroom(myElement);
-// headroom.init();
+const headroom = new Headroom(document.querySelector('header.header'));
+headroom.init();
 
 (function ($) {
     const items = $('#accordion').children();
@@ -10,17 +7,17 @@
     const btn = $('.modal .modal__button .button');
     const checkbox = $('#agreement');
 
-    $(header).headroom({
-        "offset": 205,
-        "tolerance": 5,
-        "classes": {
-            "initial": "animated",
-            "pinned": "slideDown",
-            "unpinned": "slideUp"
-        }
-    });
-
-    $(header).headroom("destroy");
+    // $(header).headroom({
+    //     "offset": 205,
+    //     "tolerance": 5,
+    //     "classes": {
+    //         "initial": "animated",
+    //         "pinned": "slideDown",
+    //         "unpinned": "slideUp"
+    //     }
+    // });
+    //
+    // $(header).headroom("destroy");
 
     // var scrollPrev = 0;
     // $(window).scroll(function () {
