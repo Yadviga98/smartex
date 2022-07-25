@@ -7,29 +7,6 @@ headroom.init();
     const btn = $('.modal .modal__button .button');
     const checkbox = $('#agreement');
 
-    // $(header).headroom({
-    //     "offset": 205,
-    //     "tolerance": 5,
-    //     "classes": {
-    //         "initial": "animated",
-    //         "pinned": "slideDown",
-    //         "unpinned": "slideUp"
-    //     }
-    // });
-    //
-    // $(header).headroom("destroy");
-
-    // var scrollPrev = 0;
-    // $(window).scroll(function () {
-    //     var scrolled = $(window).scrollTop();
-    //     if (scrolled > 100 && scrolled < scrollPrev) {
-    //         header.addClass('fixed-header');
-    //     } else {
-    //         header.removeClass('fixed-header');
-    //     }
-    //     scrollPrev = scrolled;
-    // });
-
     // $('.header__navigation a[href^="#"]').click(function (){
     //     $('.header__navigation a[href^="#"]').removeClass('lighten');
     //     $(this).addClass('lighten');
