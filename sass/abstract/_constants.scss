@@ -1,0 +1,28 @@
+$color-black: #000000;
+$color-dark-green: #305B51;
+$color-green: #3F7266;
+$color-khaki: #949E9A;
+$color-light-green: #A8EFCD;
+$color-light-orange: #FDDEB0;
+$color-light-yellow: #FFFCE3;
+$color-light: #EDF3F0;
+$color-grey: #C4C4C4;
+$color-white: #FFF;
+$color-border: #CCE0D6;
+
+@font-face {
+  font-family: 'CodeNext';
+  src: url('../fonts/CodeNext-ExtraBold.eot');
+  src: url('../fonts/CodeNext-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/CodeNext-ExtraBold.woff2') format('woff2'),
+  url('../fonts/CodeNext-ExtraBold.woff') format('woff'),
+  url('../fonts/CodeNext-ExtraBold.ttf') format('truetype'),
+  url('../fonts/CodeNext-ExtraBold.svg#CodeNext-ExtraBold') format('svg');
+}
+
+// Breakpoints (max width)
+$mobile: 320px; //mobile
+$tablet: 768px; //tablet
+$laptop: 1024px; //laptop
+$laptop-l: 1440px; //laptop-l
+$desktop: 1920px; //desktop

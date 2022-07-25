@@ -1,0 +1,107 @@
+@mixin font($size, $height, $weight: 800, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  font-family: "CodeNext", sans-serif;
+}
+
+@mixin text-L($size: 28px, $height: 36px, $weight: 500, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+@mixin text-L-mob($size: 20px, $height: 28px, $weight: 500, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+@mixin text-M($size: 18px, $height: 28px, $weight: 500, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+@mixin text-M-mob($size: 16px, $height: 24px, $weight: 500, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+@mixin text-S($size: 12px, $height: 16px, $weight: 500, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+@mixin text-S-mob($size: 10px, $height: 12px, $weight: 500, $style: normal){
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+@mixin button($size: 16px, $height: 24px, $weight: 800, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  font-family: "CodeNext", sans-serif;
+}
+
+@mixin flex($display: flex, $flex-direction: row, $align-items: center, $justify-content: center) {
+  display: $display;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin media-laptop-l {
+  @media (max-width: $laptop-l) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin transition {
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+}

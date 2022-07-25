@@ -1,0 +1,73 @@
+.button {
+  @include button;
+  position: relative;
+  border: 0;
+  border-radius: 62px;
+  text-align: center;
+  padding: 0 40px;
+  height: 72px;
+  color: $color-white;
+  width: -moz-max-content;
+  width: max-content;
+  overflow-y: hidden !important;
+  @include transition;
+  cursor: pointer;
+
+  @media (max-width: 1023px){
+    @include button($size: 14px, $height: 20px);
+    padding: 0 32px;
+    height: 52px;
+  }
+
+  &:hover {
+    background-color: $color-green;
+    @include transition;
+  }
+
+  &:hover .button-word {
+    transform: translateY(-100%);
+  }
+
+  &:active {
+    background-color: $color-green;
+  }
+
+  .words {
+    z-index: 3;
+    position: relative;
+    margin-top: 35px;
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    @media (max-width: 1023px){
+      margin-top: 26px;
+    }
+
+    .button-word {
+      color: #fff;
+      transition: all .7s cubic-bezier(.9, 0, .1, 1), color .2s ease-in-out;
+      white-space: nowrap;
+      line-height: 1.8;
+      display: block;
+
+      .scroll-word {
+        color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.button-active {
+  background: $color-dark-green;
+}
+
+.button-disabled, .button:disabled, .button[disabled] {
+  color: $color-khaki;
+  background-color: $color-light;
+  pointer-events: none;
+}

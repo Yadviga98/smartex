@@ -1,0 +1,143 @@
+.header__banner {
+  color: $color-white;
+
+  .hamburger__line {
+    background: $color-white;
+  }
+
+  .navigation {
+
+    & > li:last-child {
+      border-left: 1px solid $color-light;
+    }
+
+    .navigation__link {
+      color: $color-white;
+    }
+  }
+}
+
+.main-banner {
+  @include flex($flex-direction: column, $align-items: stretch);
+  height: 100vh;
+  background: $color-dark-green;
+
+  .main-banner__container {
+
+    .banner__wrapper {
+      @include flex($align-items: stretch, $justify-content: space-between);
+      position: relative;
+
+      .banner__content {
+        width: 1124px;
+        padding-top: 238px;
+        position: relative;
+        z-index: 15;
+
+        @media (min-width: 1920px) and (max-height: 1080px) {
+          padding-top: 160px;
+        }
+
+        @include media-laptop-l {
+          padding-top: 136px;
+          width: 825px;
+        }
+
+        @media (max-width: 1439px) {
+          width: 600px;
+          padding-top: 0;
+        }
+
+        @media (max-width: 1023px) {
+          width: 100%;
+        }
+
+        .banner__title {
+          @include font($size: 90px, $height: 100px);
+          color: $color-white;
+          letter-spacing: -0.2px;
+          margin-bottom: 72px;
+
+          @media (min-width: 1920px) {
+            @include font($size: 122px, $height: 136px);
+          }
+
+          @include media-laptop-l {
+            @include font($size: 70px, $height: 80px);
+            margin-bottom: 48px;
+          }
+
+          @media (max-width: 1023px) {
+            @include font($size: 98px, $height: 112px);
+            margin-bottom: 40px;
+          }
+
+          @media (max-width: 767px) {
+            @include font($size: 60px, $height: 70px);
+            margin-bottom: 35px;
+          }
+
+          @media (max-width: 425px) {
+            @include font($size: 40px, $height: 48px);
+            margin-bottom: 28px;
+          }
+        }
+
+        .banner__buttons {
+          @include flex($justify-content: flex-start);
+
+          .button {
+            background: rgba($color-white, .1);
+          }
+
+          .button_arrow {
+            height: 72px;
+            width: 72px;
+            padding: 0;
+            margin-right: 24px;
+
+            @include media-tablet {
+              height: 52px;
+              width: 52px;
+            }
+
+            @include media-mobile {
+              margin-right: 16px;
+            }
+
+            .words {
+              margin-top: 40px;
+
+              @include media-tablet {
+                margin-top: 30px;
+              }
+            }
+          }
+        }
+      }
+
+      .banner__image {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 70%;
+        height: 100%;
+
+        @media (max-width: 1439px) {
+          width: 50%;
+        }
+
+        @media (max-width: 1023px) {
+          display: none;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+  }
+}

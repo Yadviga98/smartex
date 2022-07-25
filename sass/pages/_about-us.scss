@@ -1,0 +1,144 @@
+.about-us {
+  background: $color-white;
+  color: $color-black;
+
+  .about-us__title {
+    margin-bottom: 28px;
+
+    @media (min-width: 1441px) {
+      @include font($size: 74px, $height: 80px);
+    }
+  }
+
+  .about-us__content {
+    @include flex($justify-content: space-around, $align-items: start);
+    margin-bottom: 80px;
+
+    @include media-laptop {
+      margin-bottom: 60px;
+    }
+
+    @include media-tablet {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 767px) {
+      @include flex($flex-direction: column);
+    }
+
+    @include media-mobile {
+      margin-bottom: 20px;
+    }
+
+    .about-us__text {
+      @include text-L;
+      width: 40%;
+      margin-right: 225px;
+
+      @include media-laptop-l {
+        margin-right: 165px;
+      }
+
+      @include media-laptop {
+        margin-right: 118px;
+      }
+
+      @include media-tablet {
+        margin-right: 88px;
+      }
+
+      @media (max-width: 767px) {
+        @include text-L-mob;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .about-us__description {
+      width: 50%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
+      p {
+        margin-bottom: 20px;
+        @include text-M;
+
+        @include media-tablet {
+          @include text-M-mob;
+        }
+      }
+    }
+  }
+
+  .about-us__numbers {
+    @include flex($justify-content: space-between);
+    column-gap: 60px;
+
+    @include media-laptop {
+      column-gap: 40px;
+    }
+
+    @include media-tablet {
+      column-gap: 32px;
+    }
+
+    @media (max-width: 720px) {
+      flex-flow: wrap;
+      row-gap: 32px;
+      column-gap: 16px;
+    }
+
+    .about-us__number {
+      width: 100%;
+
+      @media (max-width: 720px) {
+        width: 45%;
+      }
+
+      @media (max-width: 425px) {
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        @include font($size: 74px, $height: 80px);
+        color: $color-dark-green;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $color-border;
+        letter-spacing: -0.02em;
+
+        @include media-laptop-l {
+          @include font($size: 55px, $height: 60px);
+        }
+
+        @include media-laptop {
+          @include font($size: 42px, $height: 44px);
+        }
+
+        @include media-tablet {
+          @include font($size: 32px, $height: 36px);
+          padding-bottom: 16px;
+          margin-bottom: 16px;
+        }
+
+        @include media-mobile {
+          padding-bottom: 8px;
+          margin-bottom: 8px;
+        }
+      }
+
+      .text {
+        @include button;
+        width: 140px;
+
+        @include media-tablet {
+          @include button($size: 14px, $height: 20px);
+        }
+      }
+    }
+  }
+}

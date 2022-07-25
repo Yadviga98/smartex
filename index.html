@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="dist/main.css">
+    <title>Home - Smartexsoft</title>
+</head>
+<body>
+<header class="header header__banner">
+    <div class="header__inner">
+        <div class="logo">
+            <a href="#main">
+                <svg class="svg" width="140" height="41" viewBox="0 0 140 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33.7999 25.6987H19.5499V39.7955H33.7999V25.6987Z" fill="white"/>
+                    <path d="M15.7999 1.61084H1.54993V15.7076H15.7999V1.61084Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.2 3.24288C24.25 0.225679 29.15 0.225679 32.15 3.24288C35.2 6.26009 35.2 11.1074 32.15 14.0751C29.1 17.0923 24.2 17.0923 21.2 14.0751C18.15 11.1074 18.15 6.21063 21.2 3.24288Z"
+                          fill="#8DB6AB"/>
+                    <path d="M8.69995 40.4388C12.9802 40.4388 16.45 37.0063 16.45 32.7721C16.45 28.538 12.9802 25.1055 8.69995 25.1055C4.41974 25.1055 0.949951 28.538 0.949951 32.7721C0.949951 37.0063 4.41974 40.4388 8.69995 40.4388Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.55 17.0923C10.55 19.7138 13.95 19.7633 17.35 19.8127C21.6 19.8622 25.95 19.9611 26.95 24.3633H25.45C24.5 21.3461 20.9 21.2966 17.3 21.2471C13.15 21.1977 9.1 21.0987 8 17.0923H9.55V17.0923Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M51.25 16.8945C54.75 16.8945 57.35 15.1633 57.35 11.9483C57.35 8.98053 55.15 7.64505 51.9 7.19989C49.95 6.90311 49.3 6.55688 49.3 5.81494C49.3 5.07301 49.95 4.62784 51.1 4.62784C52.25 4.62784 52.9 5.12247 53.05 6.01279H57.1C56.9 2.94612 54.6 1.01709 51.15 1.01709C47.7 1.01709 45.2 2.79774 45.2 5.91387C45.2 8.88161 47.35 10.0687 50.5 10.5633C52.45 10.8601 53.15 11.3053 53.15 12.0967C53.15 12.7891 52.45 13.2838 51.25 13.2838C49.9 13.2838 49.2 12.7397 49.1 11.701H45C45.15 15.0149 47.55 16.8945 51.25 16.8945ZM59.05 16.6472H63V10.2666C63 9.03 63.8 8.2386 65.05 8.2386C66.2 8.2386 66.85 8.98053 66.85 10.2666V16.6472H70.8V10.2666C70.8 9.03 71.6 8.2386 72.85 8.2386C74 8.2386 74.65 8.98053 74.65 10.2666V16.6472H78.6V9.77193C78.6 6.50742 77 4.72677 74.1 4.72677C72.4 4.72677 71.05 5.36978 69.95 6.6558C69.25 5.41924 68 4.72677 66.35 4.72677C64.85 4.72677 63.6 5.27085 62.8 6.2601L62.65 4.97408H59V16.6472H59.05ZM85.9 16.8945C87.3 16.8945 88.55 16.4493 89.55 15.6085L89.75 16.6472H93.05V4.97408H89.7L89.55 6.01279C88.6 5.22139 87.35 4.72677 85.9 4.72677C82.5 4.72677 80.05 7.19989 80.05 10.8106C80.05 14.273 82.35 16.8945 85.9 16.8945ZM83.95 10.8106C83.95 9.32677 85 8.2386 86.5 8.2386C88 8.2386 89.05 9.27731 89.05 10.8106C89.05 12.2945 88 13.3827 86.5 13.3827C85.05 13.3827 83.95 12.2945 83.95 10.8106ZM95.1 16.6472H99.05V11.2063C99.05 9.37623 100.05 8.43645 101.85 8.43645C102.3 8.43645 102.75 8.48591 103.3 8.58483V4.97408C102.85 4.87515 102.4 4.77623 101.95 4.77623C100.7 4.77623 99.6 5.22139 98.85 6.16118L98.7 4.97408H95.1V16.6472ZM111.1 16.8945C111.8 16.8945 112.55 16.7956 113.35 16.6472V13.4816C112.95 13.5311 112.6 13.5311 112.25 13.5311C111.2 13.5311 110.6 13.1848 110.6 11.9977V8.13967H113.2V4.92462H110.6V2.15473L106.65 2.55042V4.92462H104.7V8.13967H106.65V12.5418C106.6 15.559 108.35 16.8945 111.1 16.8945ZM120.95 16.8945C123.8 16.8945 126.1 15.3612 126.95 12.8881H122.9C122.5 13.2838 121.75 13.5805 121 13.5805C119.75 13.5805 118.85 12.987 118.55 11.8988H127.2C127.85 7.79343 125.15 4.67731 121 4.67731C117.3 4.67731 114.65 7.19989 114.65 10.7612C114.6 14.3719 117.25 16.8945 120.95 16.8945ZM118.5 9.673C118.85 8.63429 119.75 7.99128 121 7.99128C122.3 7.99128 123.2 8.63429 123.5 9.673H118.5ZM127.25 16.6472V16.2515L130.8 10.7117L127.4 5.36978V4.97408H131.65L132.65 6.75472L133.45 8.13967L134.25 6.75472L135.25 4.97408H139.45V5.36978L136.05 10.7612L139.6 16.2515V16.6472H135.3L134.25 14.8171L133.45 13.4321L132.65 14.8171L131.6 16.6472H127.25ZM51.25 40.3397C54.75 40.3397 57.35 38.6085 57.35 35.3934C57.35 32.4257 55.15 31.0902 51.9 30.6451C49.95 30.3483 49.3 30.002 49.3 29.2601C49.3 28.5182 49.95 28.073 51.1 28.073C52.25 28.073 52.9 28.5676 53.05 29.458H57.1C56.9 26.3913 54.6 24.4623 51.15 24.4623C47.7 24.4623 45.2 26.2429 45.2 29.359C45.2 32.3268 47.35 33.5139 50.5 34.0085C52.45 34.3053 53.15 34.7504 53.15 35.5418C53.15 36.2343 52.45 36.7289 51.25 36.7289C49.9 36.7289 49.2 36.1848 49.1 35.1461H45C45.15 38.4601 47.55 40.3397 51.25 40.3397ZM65.05 40.3397C68.8 40.3397 71.55 37.7676 71.55 34.2558C71.55 30.6945 68.85 28.1719 65.05 28.1719C61.3 28.1719 58.55 30.6945 58.55 34.2558C58.55 37.8171 61.25 40.3397 65.05 40.3397ZM62.5 34.2558C62.5 32.7719 63.6 31.6838 65.05 31.6838C66.5 31.6838 67.6 32.7225 67.6 34.2558C67.6 35.7397 66.55 36.8278 65.05 36.8278C63.6 36.8278 62.5 35.7397 62.5 34.2558ZM74.25 28.1225V28.5676H72.3V31.7827H74.25V40.0429H78.2V31.7827H80.75V28.6666H78.1V28.5676C78.1 27.5784 78.65 27.1332 79.8 27.1332C80.1 27.1332 80.55 27.1332 80.9 27.2321V24.5612C80.15 24.4623 79.5 24.3633 78.85 24.3633C76.05 24.3633 74.25 25.5504 74.25 28.1225ZM88.5 40.3397C89.2 40.3397 89.95 40.2408 90.75 40.0924V36.9268C90.35 36.9762 90 36.9762 89.65 36.9762C88.6 36.9762 88 36.63 88 35.4429V31.6343H90.6V28.4192H88V25.6493L84.05 26.045V28.4192H82.1V31.6343H84.05V36.0364C84 39.0042 85.8 40.3397 88.5 40.3397Z"
+                          fill="white"/>
+                </svg>
+            </a>
+        </div>
+        <div class="mask"></div>
+        <nav class="header__navigation">
+            <ul class="navigation">
+                <li><a class="navigation__link active" href="#about-us">О нас</a></li>
+                <li><a class="navigation__link" href="#services">Услуги</a></li>
+                <li><a class="navigation__link" href="#project">Проекты</a></li>
+                <li><a class="navigation__link" href="#contacts">Контакты</a></li>
+                <li><a class="navigation__link btn-connect">Связаться</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="hamburger__line"></div>
+            <div class="hamburger__line"></div>
+        </div>
+        <div class="hamburger__menu">
+            <div class="hamburger__wrapper">
+                <nav class="hamburger__navigation">
+                    <ul class="navigation">
+                        <li><a class="navigation__link active" href="#about-us">О нас</a></li>
+                        <li><a class="navigation__link" href="#services">Услуги</a></li>
+                        <li><a class="navigation__link" href="#project">Проекты</a></li>
+                        <li><a class="navigation__link" href="#contacts">Контакты</a></li>
+                        <li><a class="navigation__link btn-connect">Связаться</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="main">
+    <div class="main-banner" id="main">
+        <div class="main-banner__container padding">
+            <div class="banner__wrapper">
+                <div class="banner__content">
+                    <h1 class="banner__title">Создаём</br> ПО для роста вашего бизнеса</h1>
+                    <div class="banner__buttons">
+                        <a class="button button_arrow" href="#about-us">
+                            <div class="words">
+                                <span class="button-word">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M14.7502 24.5L15.4573 24.5L15.9072 23.9546L24.1572 13.9546L21.8431 12.0455L14.0431 21.5L14.0002 21.5L14.0002 4.67958e-05L11.0002 4.65335e-05L11.0002 21.5L10.9573 21.5L3.15723 12.0455L0.843106 13.9546L9.09311 23.9546L9.54308 24.5L10.2502 24.5L12.5002 24.5L14.7502 24.5Z"
+                                              fill="white"/>
+                                    </svg>
+                                    <span class="scroll-word">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M14.7502 24.5L15.4573 24.5L15.9072 23.9546L24.1572 13.9546L21.8431 12.0455L14.0431 21.5L14.0002 21.5L14.0002 4.67958e-05L11.0002 4.65335e-05L11.0002 21.5L10.9573 21.5L3.15723 12.0455L0.843106 13.9546L9.09311 23.9546L9.54308 24.5L10.2502 24.5L12.5002 24.5L14.7502 24.5Z"
+                                                  fill="white"/><!-- -->
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+                        <a class="button" href="#services">
+                            <div class="words">
+                                <span class="button-word">Наши услуги
+                                    <span class="scroll-word">Наши услуги<!-- --></span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner__image">
+                    <img src="img/main-banner.jpg" alt="banner">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-us padding" id="about-us">
+        <h2 class="about-us__title">О нас</h2>
+        <div class="about-us__content">
+            <div class="about-us__text">Создаем ценность для организаций через инновации, опираясь на доверие, опыт и
+                технологии
+            </div>
+            <div class="about-us__description">
+                <p>Смартекс — молодая российская ИТ-компания и партнер крупного бизнеса. Входит в ТОП-20 российских
+                    ИТ-компаний.</p>
+                <p>Наша миссия — помогать компаниям из различных отраслей реализовывать амбициозные программные
+                    продукты, которые приводят к росту и развитию бизнеса.</p>
+                <p>Спектр аутсорсинговых услуг Смартекс — от комплексного ИТ-аутсорсинга и обеспечения бесперебойной
+                    технической поддержки пользователей до формирования центров компетенций и ИТ-аудита — позволяет
+                    клиентам сокращать издержки и повышать эффективность бизнес-процессов компании.</p>
+            </div>
+        </div>
+        <div class="about-us__numbers">
+            <div class="about-us__number">
+                <span>2021</span>
+                <p class="text">Год основания компании</p>
+            </div>
+            <div class="about-us__number">
+                <span>2 млн+</span>
+                <p class="text">Строчек кода написано</p>
+            </div>
+            <div class="about-us__number">
+                <span>12+</span>
+                <p class="text">Реализованных проектов</p>
+            </div>
+            <div class="about-us__number">
+                <span>55+</span>
+                <p class="text">Сотрудников работает</p>
+            </div>
+        </div>
+    </div>
+    <div class="services padding" id="services">
+        <div class="services__container">
+            <h2 class="services__title">Что мы</br> предлагаем</h2>
+            <div class="services__content" id="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3 class="title">Разработка мобильных приложений</h3>
+                    </div>
+                    <div class="item__text">
+                        <p>
+                            Оперативно выделим штатных специалистов под ваше управление для решения бизнес-задач разной
+                            сложности: от усиления команды до разработки проекта под ключ. Станем частью вашей команды,
+                            погрузимся в текущие процессы, изучим отрасль на уровне профессионалов.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3 class="title">IT-аутсорсинг</h3>
+                    </div>
+                    <div class="item__text">
+                        <p>
+                            Оперативно выделим штатных специалистов под ваше управление для решения бизнес-задач разной
+                            сложности: от усиления команды до разработки проекта под ключ. Станем частью вашей команды,
+                            погрузимся в текущие процессы, изучим отрасль на уровне профессионалов.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3 class="title">Тестирование и QA</h3>
+                    </div>
+                    <div class="item__text">
+                        <p>
+                            Оперативно выделим штатных специалистов под ваше управление для решения бизнес-задач разной
+                            сложности: от усиления команды до разработки проекта под ключ. Станем частью вашей команды,
+                            погрузимся в текущие процессы, изучим отрасль на уровне профессионалов.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3 class="title">Консалтинг</h3>
+                    </div>
+                    <div class="item__text">
+                        <p>
+                            Оперативно выделим штатных специалистов под ваше управление для решения бизнес-задач разной
+                            сложности: от усиления команды до разработки проекта под ключ. Станем частью вашей команды,
+                            погрузимся в текущие процессы, изучим отрасль на уровне профессионалов.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3 class="title">Комплексная безопасность</h3>
+                    </div>
+                    <div class="item__text">
+                        <p>
+                            Оперативно выделим штатных специалистов под ваше управление для решения бизнес-задач разной
+                            сложности: от усиления команды до разработки проекта под ключ. Станем частью вашей команды,
+                            погрузимся в текущие процессы, изучим отрасль на уровне профессионалов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="idea padding">
+        <div class="idea__container col-2">
+            <div class="image">
+                <img src="img/idea.jpg" alt="idea">
+            </div>
+            <div class="idea__content">
+                <h2 class="idea__title">Есть идея проекта?</br>Свяжитесь с нами</h2>
+                <a class="button btn-connect">
+                    <div class="words">
+                        <span class="button-word">Связаться
+                            <span class="scroll-word">Связаться<!-- --></span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="project padding" id="project">
+        <h2 class="project__title">Проекты</h2>
+        <div class="project__content">
+            <div class="project__item">
+                <a href="tinkoff.html">
+                    <div class="image">
+                        <img src="img/tinkoff.jpg" alt="Tinkoff">
+                    </div>
+                    <h3 class="title">Тинькофф</h3>
+                </a>
+            </div>
+            <div class="project__item">
+                <a>
+                    <div class="image">
+                        <img src="img/megaphone.jpg" alt="Megaphone">
+                    </div>
+                    <h3 class="title">Мегафон</h3>
+                </a>
+            </div>
+            <div class="project__item">
+                <a>
+                    <div class="image">
+                        <img src="img/ikea.jpg" alt="IKEA">
+                    </div>
+                    <h3 class="title">IKEA</h3>
+                </a>
+            </div>
+            <div class="project__item">
+                <a>
+                    <div class="image">
+                        <img src="img/rolf.jpg" alt="Rolf">
+                    </div>
+                    <h3 class="title">Рольф</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="contacts padding" id="contacts">
+        <div class="col-2">
+            <div class="image">
+                <img src="img/contacts.jpg" alt="idea">
+            </div>
+            <div class="contacts__content">
+                <h3 class="title">Офис Смартекс</h3>
+                <div class="text">Москва, 4-й Лесной переулок, д.4,</br> офис 403-404</div>
+                <div class="phone">
+                    <a href="tel:+7 977 691-19-84">+7 977 691-19-84</a>
+                </div>
+                <div class="email">
+                    <a href="mailto:business@smartexsoft.ru">business@smartexsoft.ru</a>
+                </div>
+                <a class="button btn-connect">
+                    <div class="words">
+                        <span class="button-word">Связаться
+                            <span class="scroll-word">Связаться<!-- --></span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer__text">
+        <span class="">© 2022 SmartexSoft</span>
+        <span class="footer__social-media">
+            <a target="_blank" href="https://www.instagram.com/">INSTAGRAM</a>
+        </span>
+    </div>
+    <div class="footer__link">
+        <span class="">
+            <a href="policy.html" class="">Политика конфиденциальности</a>
+        </span>
+    </div>
+</footer>
+
+<div class="modal">
+    <div class="modal__container">
+        <div class="modal__cancel">
+            <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.999512 0.999999L15.9995 15.4196M0.99951 31L15.9995 16.5804M15.9995 15.4196L15.9995 16L15.9995 16.5804M15.9995 15.4196L15.9995 16.5804"
+                      stroke="black" stroke-width="2.5"/>
+                <path d="M31.9995 0.999999L16.9995 15.4196M31.9995 31L16.9995 16.5804M16.9995 15.4196L16.9995 16L16.9995 16.5804M16.9995 15.4196L16.9995 16.5804"
+                      stroke="black" stroke-width="2.5"/>
+            </svg>
+        </div>
+        <div class="modal__inner">
+            <div class="modal__content">
+                <h3 class="modal__title">Заполните форму,</br> и мы свяжемся с вами в ближайшее время</h3>
+                <div class="modal__form">
+                    <div class="form-item">
+                        <label for="username">ФИО*</label>
+                        <input type="text" id="username">
+                        <div class="error-input">Обязательное поле</div>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email">
+                        <div class="error-input">Обязательное поле</div>
+                    </div>
+                    <div class="form-item">
+                        <label for="text-project">Раскажите о проекте</label>
+                        <textarea class="textarea" type="text" id="text-project"></textarea>
+                    </div>
+                </div>
+                <div class="modal__button">
+                    <div class="modal__agreement">
+                        <input type="checkbox" id="agreement">
+                        <label for="agreement" class="agreement">Я прочитал, понял и принимаю содержание
+                            <a href="policy.html">Политики конфиденциальности</a>
+                            и даю согласие на обработку моих данных в рамках этого приложения</label>
+                    </div>
+                    <button class="button button-disabled">Отправить</button>
+                </div>
+            </div>
+            <div class="modal__success">
+                <div class="modal__stroke">
+                    <svg width="102" height="92" viewBox="0 0 102 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M26.0975 92H44.6171L101.788 7.93655L90.2117 0.0634537L37.2075 78H33.4208L12.2499 47.5078L0.75 55.4922L26.0975 92Z"
+                              fill="#A8EFCD"/>
+                    </svg>
+                </div>
+                <div class="modal__success-text">
+                    <h3>Спасибо!</h3>
+                    <div class="success-text">Ваш запрос был отправлен,</br>
+                        в ближайшее время мы свяжемся с вами
+                    </div>
+                </div>
+                <button class="button btn-okay">Окей</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+<script src="jquery/jquery-ui.min.js"></script>
+<script scr="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/jQuery.headroom.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

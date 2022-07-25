@@ -1,0 +1,51 @@
+h1 {
+  @include font($size: 90px, $height: 100px);
+  letter-spacing: -0.02em;
+
+  @include media-tablet {
+    @include font($size: 40px, $height: 48px);
+  }
+}
+
+h2 {
+  @include font($size: 74px, $height: 80px);
+  letter-spacing: -0.02em;
+
+  @include media-laptop-l {
+    @include font($size: 55px, $height: 60px);
+  }
+
+  @include media-laptop {
+    @include font($size: 42px, $height: 44px);
+  }
+
+  @include media-tablet {
+    @include font($size: 32px, $height: 36px);
+  }
+}
+
+h3 {
+  @include font($size: 28px, $height: 36px);
+  letter-spacing: -0.02em;
+
+  @include media-tablet {
+    @include font($size: 20px, $height: 28px);
+  }
+}
+
+.padding {
+  padding: 160px 60px;
+  width: 100%;
+
+  @include media-laptop {
+    padding: 140px 40px;
+  }
+
+  @include media-tablet {
+    padding: 80px 32px;
+  }
+
+  @include media-mobile {
+    padding: 60px 16px;
+  }
+}

@@ -1,0 +1,112 @@
+.project {
+  color: $color-white;
+  background: $color-black;
+  width: 100%;
+
+  .project__title {
+    padding-bottom: 60px;
+    text-align: left;
+
+    @media (min-width: 1600px) {
+      @include font($size: 74px, $height: 80px);
+    }
+
+    @include media-laptop-l {
+      @include font($size: 55px, $height: 60px);
+    }
+
+    @include media-laptop {
+      padding-bottom: 52px;
+      @include font($size: 42px, $height: 44px);
+    }
+
+    @include media-tablet {
+      padding-bottom: 40px;
+      @include font($size: 32px, $height: 36px);
+    }
+
+    @include media-mobile {
+      padding-bottom: 32px;
+    }
+  }
+
+  .project__content {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: .4fr 1fr 1.27fr 1fr .7fr;
+
+    @media (min-width: 1600px) {
+      grid-template-rows: .4fr 1fr 1.2fr 1fr .7fr;
+    }
+
+    @include media-laptop-l {
+      grid-template-rows: .3fr 1fr 1.12fr 1fr .7fr;
+    }
+
+    @include media-laptop {
+      grid-template-rows: .3fr 1fr 1.12fr 1fr .6fr;
+    }
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .project__item {
+      @media (max-width: 600px) {
+        margin-bottom: 32px;
+      }
+
+      .image {
+        overflow: hidden;
+
+        img {
+          display: block;
+          -o-object-fit: contain;
+          object-fit: contain;
+          width: 100%;
+          @include transition;
+
+          &:hover {
+            @media (min-width: 768px) {
+              transform: scale(1.1);
+              @include transition;
+            }
+          }
+        }
+      }
+
+      .title {
+        color: $color-white;
+        margin-top: 20px;
+
+        @include media-tablet {
+          margin-top: 12px;
+        }
+      }
+
+      &:first-of-type {
+        grid-column: 1/5;
+        grid-row: 1/4;
+      }
+
+      &:nth-child(2) {
+        grid-column: 6/9;
+        grid-row: 3/6;
+      }
+
+      &:nth-child(3) {
+        grid-column: 2/4;
+        grid-row: 4/5;
+      }
+
+      &:last-of-type {
+        grid-column: 3/8;
+        grid-row: 6/12;
+      }
+    }
+  }
+
+}

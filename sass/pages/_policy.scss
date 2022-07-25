@@ -1,0 +1,154 @@
+.black__header {
+  color: $color-black;
+  box-shadow: none;
+
+  .hamburger__line {
+    background: $color-black;
+  }
+
+  .navigation {
+
+    & > li:last-child {
+      border-left: 1px solid $color-black;
+    }
+
+    .navigation__link {
+      color: $color-black;
+    }
+  }
+}
+
+.policy {
+  margin-bottom: 100px;
+
+  @include media-laptop {
+    margin-bottom: 80px;
+  }
+
+  @include media-tablet {
+    margin-bottom: 88px;
+  }
+
+  .policy__title {
+    background-color: $color-light-yellow;
+    color: $color-black;
+    padding: 328px 60px 60px 60px;
+    text-align: left;
+    letter-spacing: -0.06em;
+
+    @media (min-width: 1920px) {
+      @include font($size: 122px, $height: 136px);
+    }
+
+    @include media-laptop-l {
+      padding-top: 280px;
+      @include font($size: 70px, $height: 80px);
+    }
+
+    @include media-laptop {
+      padding: 200px 40px 40px 40px;
+    }
+
+    @include media-tablet {
+      @include font($size: 60px, $height: 68px);
+      padding: 332px 32px 32px 32px;
+    }
+
+    @media (max-width: 700px) {
+      @include font($size: 25px, $height: 32px);
+      padding-top: 204px;
+    }
+
+    @include media-mobile {
+      padding: 216px 16px 20px 16px;
+    }
+  }
+
+  .policy__content {
+    max-width: 990px;
+    padding: 80px 60px 0 60px;
+    margin: 0 auto;
+
+    @include media-laptop {
+      padding: 60px 40px 0 40px;
+    }
+
+    @include media-tablet {
+      padding: 20px 32px 0 32px;
+    }
+
+    @media (max-width: 375px) {
+      padding-top: 20px;
+    }
+
+    @include media-mobile {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .policy__subtitle {
+      text-align: left;
+      margin-top: 60px;
+      margin-bottom: 24px;
+
+      @include media-tablet {
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 375px) {
+        margin-top: 40px;
+      }
+    }
+
+    .policy__text {
+      @include text-M;
+      margin-bottom: 20px;
+
+      @include media-tablet {
+        @include text-M-mob;
+        margin-bottom: 16px;
+      }
+    }
+
+    ul {
+      position: relative;
+      @include text-M;
+      padding-top: 60px;
+
+      @include media-tablet {
+        @include text-M-mob;
+        padding-top: 44px;
+      }
+
+      @media (max-width: 375px) {
+        padding-top: 24px;
+      }
+
+      li {
+        position: relative;
+        margin-bottom: 16px;
+        margin-left: 26px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: -26px;
+          top: 13px;
+          width: 6px;
+          height: 6px;
+          border-radius: 3px;
+          background-color: $color-light-green;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

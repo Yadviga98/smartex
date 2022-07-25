@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="dist/main.css">
+    <title>Тинькофф - Smartexsoft</title>
+</head>
+<body>
+<header class="header header-tinkoff">
+    <div class="header__inner">
+        <div class="logo">
+            <a href="index.html">
+                <svg class="svg" width="140" height="41" viewBox="0 0 140 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33.7999 25.699H19.5499V39.7957H33.7999V25.699Z" fill="black"/>
+                    <path d="M15.7999 1.61072H1.54993V15.7075H15.7999V1.61072Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.2 3.24301C24.25 0.225801 29.15 0.225801 32.15 3.24301C35.2 6.26021 35.2 11.1075 32.15 14.0753C29.1 17.0925 24.2 17.0925 21.2 14.0753C18.15 11.1075 18.15 6.21075 21.2 3.24301Z"
+                          fill="black"/>
+                    <path d="M8.69995 40.4387C12.9802 40.4387 16.45 37.0062 16.45 32.772C16.45 28.5378 12.9802 25.1053 8.69995 25.1053C4.41974 25.1053 0.949951 28.5378 0.949951 32.772C0.949951 37.0062 4.41974 40.4387 8.69995 40.4387Z"
+                          fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.55 17.0924C10.55 19.7139 13.95 19.7634 17.35 19.8128C21.6 19.8623 25.95 19.9612 26.95 24.3634H25.45C24.5 21.3462 20.9 21.2967 17.3 21.2472C13.15 21.1978 9.1 21.0989 8 17.0924H9.55Z"
+                          fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M51.25 16.8946C54.75 16.8946 57.35 15.1634 57.35 11.9484C57.35 8.98065 55.15 7.64517 51.9 7.20001C49.95 6.90323 49.3 6.557 49.3 5.81506C49.3 5.07313 49.95 4.62797 51.1 4.62797C52.25 4.62797 52.9 5.12259 53.05 6.01291H57.1C56.9 2.94624 54.6 1.01721 51.15 1.01721C47.7 1.01721 45.2 2.79786 45.2 5.91399C45.2 8.88173 47.35 10.0688 50.5 10.5634C52.45 10.8602 53.15 11.3054 53.15 12.0968C53.15 12.7893 52.45 13.2839 51.25 13.2839C49.9 13.2839 49.2 12.7398 49.1 11.7011H45C45.15 15.0151 47.55 16.8946 51.25 16.8946ZM59.05 16.6473H63V10.2667C63 9.03012 63.8 8.23872 65.05 8.23872C66.2 8.23872 66.85 8.98065 66.85 10.2667V16.6473H70.8V10.2667C70.8 9.03012 71.6 8.23872 72.85 8.23872C74 8.23872 74.65 8.98065 74.65 10.2667V16.6473H78.6V9.77205C78.6 6.50754 77 4.72689 74.1 4.72689C72.4 4.72689 71.05 5.3699 69.95 6.65592C69.25 5.41936 68 4.72689 66.35 4.72689C64.85 4.72689 63.6 5.27097 62.8 6.26022L62.65 4.9742H59V16.6473H59.05ZM85.9 16.8946C87.3 16.8946 88.55 16.4495 89.55 15.6086L89.75 16.6473H93.05V4.9742H89.7L89.55 6.01291C88.6 5.22151 87.35 4.72689 85.9 4.72689C82.5 4.72689 80.05 7.20001 80.05 10.8108C80.05 14.2731 82.35 16.8946 85.9 16.8946ZM83.95 10.8108C83.95 9.32689 85 8.23872 86.5 8.23872C88 8.23872 89.05 9.27743 89.05 10.8108C89.05 12.2946 88 13.3828 86.5 13.3828C85.05 13.3828 83.95 12.2946 83.95 10.8108ZM95.1 16.6473H99.05V11.2065C99.05 9.37635 100.05 8.43657 101.85 8.43657C102.3 8.43657 102.75 8.48603 103.3 8.58496V4.9742C102.85 4.87528 102.4 4.77635 101.95 4.77635C100.7 4.77635 99.6 5.22151 98.85 6.1613L98.7 4.9742H95.1V16.6473ZM111.1 16.8946C111.8 16.8946 112.55 16.7957 113.35 16.6473V13.4817C112.95 13.5312 112.6 13.5312 112.25 13.5312C111.2 13.5312 110.6 13.185 110.6 11.9979V8.13979H113.2V4.92474H110.6V2.15485L106.65 2.55054V4.92474H104.7V8.13979H106.65V12.5419C106.6 15.5591 108.35 16.8946 111.1 16.8946ZM120.95 16.8946C123.8 16.8946 126.1 15.3613 126.95 12.8882H122.9C122.5 13.2839 121.75 13.5807 121 13.5807C119.75 13.5807 118.85 12.9871 118.55 11.8989H127.2C127.85 7.79356 125.15 4.67743 121 4.67743C117.3 4.67743 114.65 7.20001 114.65 10.7613C114.6 14.3721 117.25 16.8946 120.95 16.8946ZM118.5 9.67313C118.85 8.63442 119.75 7.9914 121 7.9914C122.3 7.9914 123.2 8.63442 123.5 9.67313H118.5ZM127.25 16.6473V16.2516L130.8 10.7118L127.4 5.3699V4.9742H131.65L132.65 6.75485L133.45 8.13979L134.25 6.75485L135.25 4.9742H139.45V5.3699L136.05 10.7613L139.6 16.2516V16.6473H135.3L134.25 14.8172L133.45 13.4323L132.65 14.8172L131.6 16.6473H127.25ZM51.25 40.3398C54.75 40.3398 57.35 38.6086 57.35 35.3936C57.35 32.4258 55.15 31.0903 51.9 30.6452C49.95 30.3484 49.3 30.0022 49.3 29.2602C49.3 28.5183 49.95 28.0731 51.1 28.0731C52.25 28.0731 52.9 28.5678 53.05 29.4581H57.1C56.9 26.3914 54.6 24.4624 51.15 24.4624C47.7 24.4624 45.2 26.243 45.2 29.3591C45.2 32.3269 47.35 33.514 50.5 34.0086C52.45 34.3054 53.15 34.7505 53.15 35.5419C53.15 36.2344 52.45 36.729 51.25 36.729C49.9 36.729 49.2 36.185 49.1 35.1462H45C45.15 38.4602 47.55 40.3398 51.25 40.3398ZM65.05 40.3398C68.8 40.3398 71.55 37.7677 71.55 34.2559C71.55 30.6946 68.85 28.1721 65.05 28.1721C61.3 28.1721 58.55 30.6946 58.55 34.2559C58.55 37.8172 61.25 40.3398 65.05 40.3398ZM62.5 34.2559C62.5 32.7721 63.6 31.6839 65.05 31.6839C66.5 31.6839 67.6 32.7226 67.6 34.2559C67.6 35.7398 66.55 36.828 65.05 36.828C63.6 36.828 62.5 35.7398 62.5 34.2559ZM74.25 28.1226V28.5678H72.3V31.7828H74.25V40.043H78.2V31.7828H80.75V28.6667H78.1V28.5678C78.1 27.5785 78.65 27.1333 79.8 27.1333C80.1 27.1333 80.55 27.1333 80.9 27.2323V24.5613C80.15 24.4624 79.5 24.3634 78.85 24.3634C76.05 24.3634 74.25 25.5505 74.25 28.1226ZM88.5 40.3398C89.2 40.3398 89.95 40.2409 90.75 40.0925V36.9269C90.35 36.9763 90 36.9764 89.65 36.9764C88.6 36.9764 88 36.6301 88 35.443V31.6344H90.6V28.4194H88V25.6495L84.05 26.0452V28.4194H82.1V31.6344H84.05V36.0366C84 39.0043 85.8 40.3398 88.5 40.3398Z"
+                          fill="black"/>
+                </svg>
+            </a>
+        </div>
+        <div class="mask"></div>
+        <nav class="header__navigation">
+            <ul class="navigation">
+                <li><a class="navigation__link active" href="#about-us">О нас</a></li>
+                <li><a class="navigation__link" href="#services">Услуги</a></li>
+                <li><a class="navigation__link" href="#project">Проекты</a></li>
+                <li><a class="navigation__link" href="#contacts">Контакты</a></li>
+                <li><a class="navigation__link btn-connect" href="#">Связаться</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="hamburger__line"></div>
+            <div class="hamburger__line"></div>
+        </div>
+        <div class="hamburger__menu">
+            <div class="hamburger__wrapper">
+                <nav class="hamburger__navigation">
+                    <ul class="navigation">
+                        <li><a class="navigation__link active" href="index.html#about-us">О нас</a></li>
+                        <li><a class="navigation__link" href="index.html#services">Услуги</a></li>
+                        <li><a class="navigation__link" href="index.html#project">Проекты</a></li>
+                        <li><a class="navigation__link" href="index.html#contacts">Контакты</a></li>
+                        <li><a class="navigation__link btn-connect" href="#">Связаться</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="tinkoff">
+    <div class="banner">
+        <div class="gradient"></div>
+        <h1 class="banner__title">Тинькофф</h1>
+    </div>
+    <div class="about-us">
+        <div class="about-us__paragraph">
+            <h2 class="about-us__title">Цели и задачи</h2>
+            <div class="about-us__block">
+                <div class="block-text">Развитие бизнеса компании, повышение сложности проектов, а также
+                    сокращение сроков их реализации приводит к необходимости организации современной, надежной и
+                    отказоустойчивой ИТ-инфраструктуры. На момент принятия решения о строительстве собственного ЦОД,
+                    вычислительное оборудование «Миландр» находилось в нескольких разрозненных серверных помещениях. Это
+                    препятствовало возможности оперативного изменения ИТ предприятия под требования бизнеса, значительно
+                    осложняло администрирование и управление ИТ-инфраструктурой, создавало проблемы защиты проектной
+                    информации — основного актива интеллектуальной собственности предприятия.
+                </div>
+                <div class="technologies">
+                    <h4>Технологии:</h4>
+                    <ul>
+                        <li>DRUPAL</li>
+                        <li>CSS3</li>
+                        <li>jQUERY</li>
+                        <li>VIVUS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="about-us__paragraph">
+            <h2 class="about-us__title">Результаты</h2>
+            <div class="about-us__block">
+                <div class="about-us__numbers">
+                    <div class="about-us__number">
+                        <span>2021</span>
+                        <p class="text">Год основания компании</p>
+                    </div>
+                    <div class="about-us__number">
+                        <span>2 млн+</span>
+                        <p class="text">Строчек кода написано</p>
+                    </div>
+                    <div class="about-us__number">
+                        <span>12+</span>
+                        <p class="text">Реализованных проектов</p>
+                    </div>
+                    <div class="about-us__number">
+                        <span>55+</span>
+                        <p class="text">Сотрудников работает</p>
+                    </div>
+                </div>
+                <div class="block-text">Итоговая надежность ЦОД соответствует требованиям Uptime Institute к
+                    уровню Tier III. После развертывания в этом ЦОД информационных систем проектирования и
+                    управления производственными процессами «Миландр» получит не только все необходимые инструменты
+                    для быстрого и качественного R&D, но и возможности предоставления мощностей своего ЦОД в аренду
+                    предприятиям – партнерам по реализации совместных проектов полного цикла в рамках
+                    технологической кооперации. Это позволит обеспечить непрерывность не только собственных
+                    бизнес-процессов, но и всех критических бизнес-процессов в рамках создаваемой промышленной
+                    кооперации.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project project__tinkoff">
+        <h2 class="project__title">Другие проекты</h2>
+        <div class="swiper swiper-pointer-events">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a class="ratio" href="#">
+                        <div class="image ratio-inner">
+                            <img class="ratio-content" src="img/megaphone.jpg" alt="Megaphone">
+                        </div>
+                        <h3 class="title">Мегафон</h3>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="ratio" href="#">
+                        <div class="image ratio-inner">
+                            <img class="ratio-content" src="img/ikea.jpg" alt="IKEA">
+                        </div>
+                        <h3 class="title">IKEA</h3>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="ratio" href="#">
+                        <div class="image ratio-inner">
+                            <img class="ratio-content" src="img/rolf.jpg" alt="Rolf">
+                        </div>
+                        <h3 class="title">Рольф</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer footer__tinkoff">
+    <div class="footer__text">
+        <span class="">© 2022 SmartexSoft</span>
+        <span class="footer__social-media">
+            <a target="_blank" href="https://www.instagram.com/">INSTAGRAM</a>
+        </span>
+    </div>
+    <div class="footer__link">
+        <span class="">
+            <a href="policy.html" class="">Политика конфиденциальности</a>
+        </span>
+    </div>
+</footer>
+
+<div class="modal">
+    <div class="modal__container">
+        <div class="modal__cancel">
+            <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.999512 0.999999L15.9995 15.4196M0.99951 31L15.9995 16.5804M15.9995 15.4196L15.9995 16L15.9995 16.5804M15.9995 15.4196L15.9995 16.5804"
+                      stroke="black" stroke-width="2.5"/>
+                <path d="M31.9995 0.999999L16.9995 15.4196M31.9995 31L16.9995 16.5804M16.9995 15.4196L16.9995 16L16.9995 16.5804M16.9995 15.4196L16.9995 16.5804"
+                      stroke="black" stroke-width="2.5"/>
+            </svg>
+        </div>
+        <div class="modal__inner">
+            <div class="modal__content">
+                <h3 class="modal__title">Заполните форму,</br> и мы свяжемся с вами в ближайшее время</h3>
+                <div class="modal__form">
+                    <div class="form-item">
+                        <label for="username">ФИО*</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form-item">
+                        <label for="text-project">Раскажите о проекте</label>
+                        <input type="text" id="text-project">
+                    </div>
+                </div>
+                <div class="modal__button">
+                    <div class="modal__agreement">
+                        <input type="checkbox" id="agreement">
+                        <label for="agreement" class="agreement">Я прочитал, понял и принимаю содержание
+                            <a href="policy.html">Политики конфиденциальности</a>
+                            и даю согласие на обработку моих данных в рамках этого приложения</label>
+                    </div>
+                    <button class="button button-disabled">Отправить</button>
+                </div>
+            </div>
+            <div class="modal__success">
+                <div class="modal__stroke">
+                    <svg width="102" height="92" viewBox="0 0 102 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M26.0975 92H44.6171L101.788 7.93655L90.2117 0.0634537L37.2075 78H33.4208L12.2499 47.5078L0.75 55.4922L26.0975 92Z"
+                              fill="#A8EFCD"/>
+                    </svg>
+                </div>
+                <div class="modal__success-text">
+                    <h3>Спасибо!</h3>
+                    <div class="success-text">Ваш запрос был отправлен,</br>
+                        в ближайшее время мы свяжемся с вами
+                    </div>
+                </div>
+                <button class="button">Окей</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+<script src="jquery/jquery-ui.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

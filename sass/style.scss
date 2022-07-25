@@ -1,0 +1,26 @@
+@import "base/reset";
+
+//Abstract
+@import "abstract/constants";
+@import "abstract/mixins";
+
+//Base
+@import "base/base";
+@import "base/buttons";
+@import "base/hamburger";
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/modal";
+
+// Pages
+@import "pages/about-us";
+@import "pages/contacts";
+@import "pages/error";
+@import "pages/idea";
+@import "pages/main-banner";
+@import "pages/policy";
+@import "pages/project";
+@import "pages/services";
+@import "pages/tinkoff";

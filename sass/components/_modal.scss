@@ -1,0 +1,280 @@
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $color-white;
+  z-index: 100000;
+
+  .modal__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .modal__cancel {
+      position: absolute;
+      cursor: pointer;
+      top: 45px;
+      right: 45px;
+      z-index: 5;
+
+      @include media-tablet {
+        top: 32px;
+        right: 32px;
+
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      @media (max-width: 530px) {
+        top: 25px;
+        right: 25px;
+      }
+
+      @include media-mobile {
+        top: 16px;
+        right: 16px;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .modal__inner {
+      @include flex($flex-direction: column);
+      padding: 60px 0;
+      overflow-y: auto;
+      background: $color-white;
+      border-radius: 20px;
+      position: relative;
+
+      .modal__content {
+        height: 100%;
+        max-width: 700px;
+
+        @include media-tablet {
+          max-width: 528px;
+          padding: 0 16px;
+        }
+
+        .modal__title {
+          margin-bottom: 32px;
+
+          @include media-tablet {
+            margin-bottom: 24px;
+          }
+        }
+
+        .modal__form {
+          @include flex($flex-direction: column, $align-items: flex-start);
+          @include text-M;
+
+          .form-item {
+            margin-bottom: 32px;
+            width: 100%;
+
+            @include media-tablet {
+              margin-bottom: 24px;
+            }
+
+            .error-input {
+              display: none;
+              margin-bottom: 4px;
+              @include text-S();
+
+              @include media-tablet {
+                @include text-S-mob;
+              }
+            }
+
+            .textarea {
+              min-height: 175px;
+              width: 100%;
+              overflow: auto;
+              outline: none;
+              box-shadow: none;
+              border: 1px solid #000;
+              resize: none;
+              margin-top: 8px;
+
+              @include media-tablet {
+                min-height: 160px;
+              }
+            }
+
+            label {
+              @include media-tablet {
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
+
+            input {
+              width: 100%;
+              height: 60px;
+              border: 1px solid $color-black;
+              border-radius: 0;
+              color: $color-black;
+              @include text-M;
+              letter-spacing: -.1px;
+              padding: 14px 17px;
+              margin-top: 8px;
+
+              @include media-tablet {
+                height: 52px;
+                @include text-M-mob;
+              }
+            }
+          }
+        }
+
+        .modal__button {
+          @include flex($justify-content: space-between);
+
+          @media (max-width: 520px) {
+            flex-direction: column;
+          }
+
+          .modal__agreement {
+            @include flex($align-items: flex-start, $justify-content: space-between);
+            @include text-S;
+
+            @include media-tablet {
+              @include text-S-mob;
+            }
+
+            @media (max-width: 520px) {
+              width: 100%;
+            }
+
+            input {
+              position: absolute;
+              opacity: 0;
+              z-index: -1;
+            }
+
+            input + label {
+              user-select: none;
+
+              &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                border: 1px solid $color-black;
+                border-radius: 6px;
+                width: 20px;
+                height: 20px;
+                z-index: 555;
+              }
+            }
+
+            input:checked + label::after {
+              content: '';
+              position: absolute;
+              left: 5px;
+              top: 5px;
+              width: 10px;
+              height: 10px;
+              background: $color-black;
+              border: 1px solid $color-black;
+              border-radius: 3px;
+            }
+
+            .agreement {
+              max-width: 315px;
+              position: relative;
+              padding-left: 28px;
+
+              @include media-tablet {
+                font-size: 10px;
+                line-height: 12px;
+              }
+
+              @media (max-width: 520px) {
+                width: 100%;
+                max-width: none;
+              }
+
+              a {
+                cursor: pointer;
+                text-decoration: underline;
+              }
+            }
+          }
+
+          .button {
+            margin-left: 24px;
+
+            @media (max-width: 520px) {
+              margin: 24px 0 0 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .modal__success {
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        @media (max-width: 426px) {
+          width: 225px;
+        }
+
+        .modal__stroke {
+          position: relative;
+
+          svg {
+            position: absolute;
+            top: -90px;
+            left: -35px;
+
+            @include media-tablet {
+              width: 75px;
+              height: 69px;
+              top: -68px;
+              left: -26px;
+            }
+          }
+        }
+
+        .modal__success-text {
+          text-align: center;
+          margin-top: 37px;
+          margin-bottom: 48px;
+
+          @include media-tablet {
+            margin-top: 21px;
+            margin-bottom: 28px;
+          }
+
+          .success-text {
+            @include text-M;
+            margin-top: 20px;
+
+            @include media-tablet {
+              @include text-M-mob;
+            }
+          }
+        }
+
+        .button {
+          background: $color-dark-green;
+        }
+      }
+    }
+  }
+}
