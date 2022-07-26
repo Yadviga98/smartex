@@ -9,7 +9,6 @@ headroom.init();
     const nav = $('.navigation');
     const links = $(nav).find('a');
 
-
     //Filter nav links by hash
     let linkArr = $(links).toArray();
     let withHash = linkArr.filter(el => el.hash)
