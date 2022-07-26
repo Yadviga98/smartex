@@ -428,31 +428,6 @@ ul li {
   }
 }
 
-.lighten {
-  color: #305B51;
-}
-.lighten::after {
-  content: "";
-  background-color: #305B51;
-  position: absolute;
-  left: 0;
-  bottom: -38px;
-  width: 100%;
-  height: 3px;
-}
-@media (max-width: 1024px) {
-  .lighten::after {
-    left: -48px;
-  }
-}
-@media (max-width: 768px) {
-  .lighten::after {
-    left: -57px;
-    width: 4px;
-    height: 100%;
-  }
-}
-
 .header {
   position: fixed;
   display: flex;
@@ -505,16 +480,6 @@ ul li {
   color: #000000 !important;
   background: #FFF !important;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !important;
-}
-@media (max-width: 768px) {
-  .header.headroom--not-top.headroom--pinned {
-    transform: translateY(86px);
-  }
-}
-@media (max-width: 320px) {
-  .header.headroom--not-top.headroom--pinned {
-    transform: translateY(52px);
-  }
 }
 .header.headroom--not-top.headroom--pinned .logo .svg path {
   fill: black !important;
@@ -585,9 +550,6 @@ ul li {
     padding-right: 49px;
   }
 }
-.header .header__inner .header__navigation .navigation > li:not(:last-child):target {
-  color: #305B51;
-}
 .header .header__inner .header__navigation .navigation .navigation__link {
   font-size: 16px;
   font-weight: 800;
@@ -595,6 +557,18 @@ ul li {
   font-style: normal;
   font-family: "CodeNext", sans-serif;
   cursor: pointer;
+}
+.header .header__inner .header__navigation .navigation .navigation__link.active {
+  color: #305B51;
+}
+.header .header__inner .header__navigation .navigation .navigation__link.active::after {
+  content: "";
+  background-color: #305B51;
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  width: 100%;
+  height: 3px;
 }
 .header .header__inner .mask {
   background-color: rgba(0, 0, 0, 0.2);

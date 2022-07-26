@@ -6,11 +6,29 @@ headroom.init();
     const header = $('.header');
     const btn = $('.modal .modal__button .button');
     const checkbox = $('#agreement');
+    const nav = $('.navigation');
+    const links = $(nav).find('a');
 
-    // $('.header__navigation a[href^="#"]').click(function (){
-    //     $('.header__navigation a[href^="#"]').removeClass('lighten');
-    //     $(this).addClass('lighten');
-    // });
+    function scrollActive() {
+        let documentHeight = $(document).scrollTop();
+        $(links).each(function () {
+            let hash = $(this).attr('href');
+            let section = $(hash);
+            // console.log(hash, section);
+            // console.log(documentHeight);
+            // console.log(section.position().top);
+            if (section.position().top <= documentHeight) {
+                // console.log($(this));
+                $(nav).find('a.active').removeClass('active');
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+
+    }
+
+    $(document).on("scroll", scrollActive);
 
     if ($('.swiper').length) {
         const swiper = new Swiper('.swiper', {
@@ -107,4 +125,3 @@ headroom.init();
     });
 
 }(jQuery));
-
