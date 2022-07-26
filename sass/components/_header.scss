@@ -84,13 +84,15 @@
     }
 
     .header__menu {
-        //transform: translateX(384px);
-        @include transition;
+      transform: translateX(384px);
+      @include transition;
 
       .header__navigation {
         @include flex($justify-content: space-around);
 
         @media (max-width: 1023px) {
+          //transform: translateX(384px);
+          //@include transition;
           display: none;
         }
 

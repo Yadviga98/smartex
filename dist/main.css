@@ -219,7 +219,7 @@ h3 {
   position: fixed;
   top: 0;
   right: 0;
-  transform: translateX(0);
+  transform: translateX(0) !important;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -503,6 +503,7 @@ ul li {
   }
 }
 .header .header__inner .header__menu {
+  transform: translateX(384px);
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
