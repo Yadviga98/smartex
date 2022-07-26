@@ -10,15 +10,21 @@ headroom.init();
     const links = $(nav).find('a');
 
 
+    //Filter nav links by hash
+    let linkArr = $(links).toArray();
+    let withHash = linkArr.filter(el => el.hash)
+
     //Highlight menu anchors on scroll
     function scrollActive() {
         let documentHeight = $(document).scrollTop();
-        $(links).each(function () {
+
+        $(withHash).each(function () {
             let hash = $(this).attr('href');
             let section = $(hash);
-            section.position().top <= documentHeight ? ($(links).removeClass('active'), $(this).addClass('active')) : $(this).removeClass('active');
+            section.position().top <= documentHeight && section.position().top + section.outerHeight() > documentHeight
+                ? ($(this).siblings().removeClass('active'), $(this).addClass('active'))
+                : $(this).removeClass('active');
         });
-
     }
 
     $(document).on("scroll", scrollActive);
