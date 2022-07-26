@@ -120,10 +120,11 @@
 
         .navigation__link {
           @include button;
+          position: relative;
           cursor: pointer;
 
           &.active {
-            color: $color-dark-green;
+            color: $color-dark-green !important;
 
             &::after {
               content: "";
@@ -134,15 +135,15 @@
               width: 100%;
               height: 3px;
 
-              //@include media-laptop {
-              //  left: -48px;
-              //}
-              //
-              //@include media-tablet {
-              //  left: -57px;
-              //  width: 4px;
-              //  height: 100%;
-              //}
+              @include media-laptop {
+                left: -48px;
+              }
+
+              @include media-tablet {
+                left: -57px;
+                width: 4px;
+                height: 100%;
+              }
             }
           }
         }
