@@ -64,7 +64,7 @@ headroom.init();
         }
     });
 
-    $('.mask, .hamburger__menu .navigation__link').click(function () {
+    $('.mask, .header__menu .navigation__link').click(function () {
         $(header).removeClass('menu-open');
         $('.mask').css('visibility', 'hidden').animate({opacity: 0}, 1000);
         $('body').css('overflow', 'inherit');

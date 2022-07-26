@@ -18,7 +18,8 @@
     <div class="header__inner">
         <div class="logo">
             <a href="index.html">
-                <svg class="svg" width="140" height="41" viewBox="0 0 140 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="svg" width="140" height="41" viewBox="0 0 140 41" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M33.7999 25.699H19.5499V39.7957H33.7999V25.699Z" fill="black"/>
                     <path d="M15.7999 1.61072H1.54993V15.7075H15.7999V1.61072Z" fill="black"/>
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -36,24 +37,11 @@
             </a>
         </div>
         <div class="mask"></div>
-        <nav class="header__navigation">
-            <ul class="navigation">
-                <li><a class="navigation__link active" href="#about-us">О нас</a></li>
-                <li><a class="navigation__link" href="#services">Услуги</a></li>
-                <li><a class="navigation__link" href="#project">Проекты</a></li>
-                <li><a class="navigation__link" href="#contacts">Контакты</a></li>
-                <li><a class="navigation__link btn-connect" href="#">Связаться</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger">
-            <div class="hamburger__line"></div>
-            <div class="hamburger__line"></div>
-        </div>
-        <div class="hamburger__menu">
-            <div class="hamburger__wrapper">
-                <nav class="hamburger__navigation">
+        <div class="header__menu">
+            <div class="header__wrapper">
+                <nav class="header__navigation">
                     <ul class="navigation">
-                        <li><a class="navigation__link active" href="index.html#about-us">О нас</a></li>
+                        <li><a class="navigation__link" href="index.html#about-us">О нас</a></li>
                         <li><a class="navigation__link" href="index.html#services">Услуги</a></li>
                         <li><a class="navigation__link" href="index.html#project">Проекты</a></li>
                         <li><a class="navigation__link" href="index.html#contacts">Контакты</a></li>
@@ -61,6 +49,10 @@
                     </ul>
                 </nav>
             </div>
+        </div>
+        <div class="hamburger">
+            <div class="hamburger__line"></div>
+            <div class="hamburger__line"></div>
         </div>
     </div>
 </header>
@@ -190,14 +182,16 @@
                     <div class="form-item">
                         <label for="username">ФИО*</label>
                         <input type="text" id="username">
+                        <div class="error-input">Обязательное поле</div>
                     </div>
                     <div class="form-item">
                         <label for="email">Email*</label>
                         <input type="email" id="email">
+                        <div class="error-input">Обязательное поле</div>
                     </div>
                     <div class="form-item">
                         <label for="text-project">Раскажите о проекте</label>
-                        <input type="text" id="text-project">
+                        <textarea class="textarea" type="text" id="text-project"></textarea>
                     </div>
                 </div>
                 <div class="modal__button">
@@ -224,7 +218,7 @@
                         в ближайшее время мы свяжемся с вами
                     </div>
                 </div>
-                <button class="button">Окей</button>
+                <button class="button btn-okay">Окей</button>
             </div>
         </div>
     </div>
@@ -233,6 +227,7 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
 <script src="jquery/jquery-ui.min.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="headroom/headroom.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
