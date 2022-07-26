@@ -9,27 +9,21 @@ headroom.init();
     const nav = $('.navigation');
     const links = $(nav).find('a');
 
+
+    //Highlight menu anchors on scroll
     function scrollActive() {
         let documentHeight = $(document).scrollTop();
         $(links).each(function () {
             let hash = $(this).attr('href');
             let section = $(hash);
-            // console.log(hash, section);
-            // console.log(documentHeight);
-            // console.log(section.position().top);
-            if (section.position().top <= documentHeight) {
-                // console.log($(this));
-                $(nav).find('a.active').removeClass('active');
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
+            section.position().top <= documentHeight ? ($(links).removeClass('active'), $(this).addClass('active')) : $(this).removeClass('active');
         });
 
     }
 
     $(document).on("scroll", scrollActive);
 
+    //Init swiper slide on single project page
     if ($('.swiper').length) {
         const swiper = new Swiper('.swiper', {
             breakpoints: {
